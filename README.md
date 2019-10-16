@@ -14,3 +14,8 @@ go run server/server.go
 go run client/client.go world
 > Greeting: Hello world
 ```
+
+### create gRPC document
+```
+protoc --doc_out=./docs --doc_opt=html,index.html *.proto
+```
