@@ -1,4 +1,4 @@
-module github.com/k197781/hello-grpc
+module github.com/knut1027/go-gRPC
 
 go 1.12
 
