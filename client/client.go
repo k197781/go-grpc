@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	pb "github.com/k197781/hello-grpc"
+	pb "github.com/knut1027/go-gRPC"
 	"google.golang.org/grpc"
 )
 
