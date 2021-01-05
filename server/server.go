@@ -20,6 +20,11 @@ func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.He
 	return &pb.HelloReply{Message: "Hello " + in.Name + ", agein"}, nil
 }
 
+func (s *server) SayHelloWithID(ctx context.Context, in *pb.HelloWithIDRequest) (*pb.HelloReply, error) {
+	log.Printf("Received: %v", in.Id)
+	return &pb.HelloReply{Message: "Hello " + in.Id}, nil
+}
+
 func main() {
 	addr := ":50051"
 	lis, err := net.Listen("tcp", addr)

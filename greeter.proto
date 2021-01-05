@@ -3,10 +3,15 @@ package hello;
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
   rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+  rpc SayHelloWithID (HelloWithIDRequest) returns (HelloReply) {}
 }
 message HelloRequest {
   string name = 1;
 }
 message HelloReply {
   string message = 1;
+}
+
+message HelloWithIDRequest {
+  string id = 1;
 }

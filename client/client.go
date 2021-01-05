@@ -24,4 +24,10 @@ func main() {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.Message)
+
+	r, err = c.SayHelloWithID(ctx, &pb.HelloWithIDRequest{Id: "id001"})
+	if err != nil {
+		log.Fatalf("could not greet: %v", err)
+	}
+	log.Printf("Greeting: %s", r.Message)
 }
