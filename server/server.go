@@ -9,7 +9,9 @@ import (
 	"google.golang.org/grpc"
 )
 
-type server struct{}
+type server struct{
+	pb.UnimplementedGreeterServer
+}
 
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.Name)
